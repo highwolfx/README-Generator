@@ -1,49 +1,42 @@
-# Project Title Here
+# Project Title
 
-  ![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)
+  ![License Badge](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
 
 
   ## Description
 
-  Descriptive description
+  Description here.
   
   
   ## Table of Contents
   
   
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Contributing ](#contributing)
-    * [Tests](#tests)
-    * [License](#license)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing ](#contributing)
+  * [License](#license)
   
   ## Installation
 
   *Instructions on installation:*
 
-  Installation
+  Installation steps here.
   
   ## Usage
 
   *Instructions on usage and use examples:*
 
-  Usage
+  Usage here.
   
   ## Contribution
 
   *If you wish to contribute to the project, here are some guidelines to follow.*
 
-  Contribution
-  
-  ## Tests
-
-  *Tests for the application and instructions on how to run them:*
-
-  Tests
+  Contribution.
   
   ## License
 
-  The application is licensed under the MIT License.
+  The application is licensed under the Apache 2.0 License.
 
   ---
 

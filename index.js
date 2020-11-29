@@ -86,8 +86,9 @@ function writeToFile(fileName, data) {
         if (err) {
             return console.log(err);
         };
-
+        console.log ("---------------------------")
         console.log ("Your README markdown file has been generated!")
+        console.log ("Please check OutputREADME.md for your generated README file!")
     });
 };
 

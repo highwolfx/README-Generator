@@ -50,23 +50,23 @@ function generateMarkdown(userInput) {
   `;
   if (userInput.install !== ''){
     tableC += `
-    * [Installation](#installation)`
+  * [Installation](#installation)`
   };
   if (userInput.use !== ''){
     tableC += `
-    * [Usage](#usage)`
+  * [Usage](#usage)`
   };
   if (userInput.contr !== ''){
     tableC += `
-    * [Contributing ](#contributing)`
+  * [Contributing](#contributing)`
   };
   if (userInput.tests !== ''){
     tableC += `
-    * [Tests](#tests)`
+  * [Tests](#tests)`
   };
   if (userInput.license !== ''){
     tableC += `
-    * [License](#license)`
+  * [License](#license)`
   };
   
 
