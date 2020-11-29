@@ -1,11 +1,11 @@
-# Project Title here
+# Project Title Here
 
   ![License Badge](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
   ## Description
 
-  Descriptive description here
+  Descriptive description
   
   
   ## Table of Contents
@@ -21,7 +21,7 @@
 
   *Instructions on installation:*
 
-  Install instructions
+  Installation
   
   ## Usage
 
@@ -43,15 +43,15 @@
   
   ## License
 
-  The applicaiton is licensed under the MIT License.
-  
+  The application is licensed under the MIT License.
+
   ---
 
   ## Questions?
 
   For any questions, contact me at the information below:
 
-  GitHub: highwolfx
+  GitHub: [highwolfx](https://github.com/highwolfx)
   
   Email: seanchangx@gmail.com
   

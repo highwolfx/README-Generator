@@ -132,20 +132,20 @@ function generateMarkdown(userInput) {
   
   ## License
 
-  The applicaiton is licensed under the ${userInput.license}.`;
+  The application is licensed under the ${userInput.license}.`;
 
 
   // Questions section
   markdownOutput +=
   `
-  
+
   ---
 
   ## Questions?
 
   For any questions, contact me at the information below:
 
-  GitHub: ${userInput.username}
+  GitHub: [${userInput.username}](https://github.com/${userInput.username})
   
   Email: ${userInput.email}
   `;
