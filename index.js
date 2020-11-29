@@ -1,8 +1,8 @@
 // Packages
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
 const generateMarkdown = require('./utils/generateMarkdown.js');
+const util = require('util');
 
 
 // array of questions for user
@@ -13,7 +13,18 @@ const questions = [
         name: 'username',
         validate: username => {
             if (username.length < 1) {
-                return console.log("Please enter a valid GitHub username");
+                return console.log("Please enter a valid GitHub username.");
+            };
+            return true;
+        }
+    },
+    {
+        type: 'input',
+        message: "Enter your email address: ",
+        name: 'email',
+        validate: email => {
+            if (email.length < 1) {
+                return console.log("Please enter a valid email address.");
             };
             return true;
         }
@@ -63,7 +74,7 @@ const questions = [
     {
         type: 'list',
         message: "Choose a license for your project.",
-        choices: ['MIT License', 'GNU GPLv2', 'Apache License', 'GNU GPL v3', 'Unlicense License', 'Apache-2.0', 'Mozilla Public License 2.0'],
+        choices: ['Apache 2.0 License', 'GNU GPL v2', 'GNU GPL v3', 'GNU AGPL v3', 'MIT License', 'Mozilla Public License 2.0', 'Unlicense License'],
         name: 'license'
     }
 ];
@@ -81,12 +92,14 @@ function writeToFile(fileName, data) {
 };
 
 // function to initialize program
-function init() {
-    const userInput = inquirer.prompt(questions);
-    const output = generateMarkdown(userInput)
-    console.log('Generating README...')
+const waitToWrite = util.promisify(writeToFile);
+
+async function init() {
+    const userInput = await inquirer.prompt(questions);
+    console.log('Generating README...');
+    const output = generateMarkdown(userInput);
     console.log(output);
-    writeToFile('OutputREADME.md', output);  
+    await waitToWrite('OutputREADME.md', output);  
 };
 
 // function call to initialize program
