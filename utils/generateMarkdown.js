@@ -1,5 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(userInput) {
+  // License badges
   let licenseURL;
   switch (userInput.license) {
     case 'MIT License':
@@ -25,6 +26,8 @@ function generateMarkdown(userInput) {
       break;
   };
 
+
+  // Markdown Output top bar
   let markdownOutput = 
   `# ${userInput.title}
 
@@ -38,34 +41,116 @@ function generateMarkdown(userInput) {
   
   `;
 
+
+  // Table of Contents
   let tableC =
 
   `## Table of Contents
   
-  *[License](#license)
   `;
   if (userInput.install !== ''){
     tableC += `
-    *[Installation](#installation)`
+    * [Installation](#installation)`
   };
   if (userInput.use !== ''){
     tableC += `
-    *[Usage](#usage)`
+    * [Usage](#usage)`
   };
   if (userInput.contr !== ''){
     tableC += `
-    *[Contributing ](#contributing)`
+    * [Contributing ](#contributing)`
   };
   if (userInput.tests !== ''){
     tableC += `
-    *[Tests](#tests)`
+    * [Tests](#tests)`
   };
+  if (userInput.license !== ''){
+    tableC += `
+    * [License](#license)`
+  };
+  
 
-  markdownOutput += 
+  // Adds Table of Contents to Output
+  markdownOutput += tableC;
+
+
+  // Optional Installation section
+  if (userInput.install !== ''){
+    markdownOutput +=
   `
   
+  ## Installation
+
+  *Instructions on installation:*
+
+  ${userInput.install}`
+  };
+
+
+  // Optional Usage section
+  if (userInput.use !== ''){
+    markdownOutput +=
   `
+  
+  ## Usage
+
+  *Instructions on usage and use examples:*
+
+  ${userInput.use}`
+  };
+
+
+  // Optional Contribution section
+  if (userInput.contr !== ''){
+    markdownOutput +=
+  `
+  
+  ## Contribution
+
+  *If you wish to contribute to the project, here are some guidelines to follow.*
+
+  ${userInput.contr}`
+  };
+
+
+  // Optional Tests section
+  if (userInput.tests !== ''){
+    markdownOutput +=
+  `
+  
+  ## Tests
+
+  *Tests for the application and instructions on how to run them:*
+
+  ${userInput.tests}`
+  };
+  
+
+  //License section
+  markdownOutput +=
+  `
+  
+  ## License
+
+  The applicaiton is licensed under the ${userInput.license}.`;
+
+
+  // Questions section
+  markdownOutput +=
+  `
+  
+  ---
+
+  ## Questions?
+
+  For any questions, contact me at the information below:
+
+  GitHub: ${userInput.username}
+  
+  Email: ${userInput.email}
+  `;
+
   return markdownOutput;
-}
+};
 
 module.exports = generateMarkdown;

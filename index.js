@@ -53,12 +53,12 @@ const questions = [
     },
     {
         type: 'input',
-        message: "Please enter, if applicable, the installation steps for the project: ",
+        message: "If applicable, please enter the installation steps for the project: ",
         name: 'install'
     },
     {
         type: 'input',
-        message: "Please provide instructions on usage and examples of how the project would be used: ",
+        message: "If applicable, please provide instructions on usage and examples of how the project would be used: ",
         name: 'use'
     },
     {
